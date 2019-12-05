@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Category
+        </title>
+    </head>
+    
+    <form name="f1" method="post" action="/addproduct">
+        <body>
+            Enter product name:
+            <input type="text" name="proname">
+            <br>
+
+            
+            Enter product price:
+            <input type="text" name="proprice">
+            <br>
+
+            <select id="category_cmb" name="category_cmb" onchange="changeme()">
+                <%data.forEach(cat=>{%>
+                <option value="<%= cat._id%>"><%= cat.catname%></option>
+                <%});%>
+            </select>
+            <!-- <select id="cmb" onchange="changeme()">
+                <%data.forEach(cat=>{%>
+                    <option value="<%= cat._id%>"><%= cat.catname%></option>
+                <%});%>
+            </select> -->
+            <br>
+            <input type="submit" name="submit" value="submit">
+        </body>
+    </form>
+</html>
+<script>
+function changeme()
+{
+    var id=document.getElementById('category_cmb').value;
+    alert(id);
+    
+}
+</script>

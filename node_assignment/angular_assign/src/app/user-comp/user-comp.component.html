@@ -1,0 +1,11 @@
+<div>
+    <div>Create a new account!</div>
+    <div>
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <input type="text" name="name" placelolder="name" ngModel>
+        <br>
+        <h1>{{val}}</h1>
+        <input type="submit">
+      </form>
+    </div>
+</div>
